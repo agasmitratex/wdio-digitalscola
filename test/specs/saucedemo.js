@@ -1,5 +1,3 @@
-
-
 describe('Sauce Demo automation test', () => {
     it('Success Login', async () => {
         await browser.url('https://www.saucedemo.com')
@@ -10,6 +8,8 @@ describe('Sauce Demo automation test', () => {
 
         await username.setValue('standard_user')
         await password.setValue('secret_sauce')
+
+        await browser.pause(1000)
 
         await loginButton.click()
 
